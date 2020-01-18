@@ -6,4 +6,4 @@ ruby
 1.clone this repo
 2.navigate to the repo
 3.open terminal
-4.type ruby lookup.rb <domain>(assuming you have ruby installed)
+4.type ruby lookup.rb domain  (assuming you have ruby installed)
