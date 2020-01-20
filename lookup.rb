@@ -22,8 +22,8 @@ def parse_dns(dns_raw)
   dns_records = {}
   dns_raw.reject { |line| line.empty? }.
     map { |line| line.split(",") }.
-    reject { |records_array| records_array.length < 3 }.
-    map { |records_array| records_array.map { |value| value.strip } }.
+    reject { |record| record.length < 3 }.
+    map { |record_array| record_array.map { |data_in_record| data_in_record.strip } }.
     each { |data| dns_records[data[1]] = { :type => data[0], :value => data[2] } }
   dns_records
 end
